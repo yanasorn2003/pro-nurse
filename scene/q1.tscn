@@ -1,0 +1,254 @@
+[gd_scene load_steps=13 format=3 uid="uid://m5yd7lcog2pk"]
+
+[ext_resource type="Texture2D" uid="uid://ek4gljto3std" path="res://asset/Untitled 5.png" id="1_f0ocp"]
+[ext_resource type="Script" path="res://scene/control.gd" id="2_m2xxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqiym"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hifr1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1m3vm"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfaxk"]
+draw_center = false
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wvcc"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_hlgff"]
+ItemList/colors/font_hovered_color = Color(0.133333, 0.243137, 0.721569, 1)
+ItemList/colors/font_selected_color = Color(0.133333, 0.243137, 0.721569, 1)
+ItemList/styles/hovered = SubResource("StyleBoxFlat_1m3vm")
+ItemList/styles/panel = SubResource("StyleBoxFlat_tfaxk")
+ItemList/styles/selected = SubResource("StyleBoxFlat_5wvcc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pkdy"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwbxn"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fn5su"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_daknw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="Untitled5" type="Sprite2D"]
+self_modulate = Color(0.34, 0.34, 0.34, 1)
+position = Vector2(581, 320)
+scale = Vector2(0.621991, 0.621991)
+texture = ExtResource("1_f0ocp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.058
+anchor_right = 0.5
+anchor_bottom = 0.058
+offset_left = -1259.0
+offset_top = -539.64
+offset_right = -661.0
+offset_bottom = -417.64
+grow_horizontal = 2
+size_flags_vertical = 0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+modulate = Color(1, 1, 1, 0.792157)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eqiym")
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "วัดความรู้ก่อนเรียน"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1817.0
+offset_top = -1395.0
+offset_right = -103.0
+offset_bottom = -611.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="MarginContainer2"]
+modulate = Color(1, 1, 1, 0.823529)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hifr1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_m2xxg")
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.245
+anchor_right = 0.5
+anchor_bottom = 0.245
+offset_left = -811.0
+offset_top = -284.8
+offset_right = 772.0
+offset_bottom = -186.8
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "ผู้ป่วยที่ได้รับการวินิจฉัยว่าเป็นมะเร็งตับ(HEPATOCELLULAR CARCINOMA)  ควรได้รับการเฝ้าระวังปัญหาใดบ้าง? (สามารถเลือกตอบได้มากกว่า 1 ข้อ)"
+autowrap_mode = 3
+
+[node name="ItemList" type="ItemList" parent="Control"]
+visible = false
+visibility_layer = 33
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -18.725
+anchor_top = -3.7
+anchor_right = -18.725
+anchor_bottom = -3.7
+offset_left = -5.03052
+offset_top = 11.342
+offset_right = 1508.97
+offset_bottom = 582.342
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_hlgff")
+theme_override_colors/guide_color = Color(0, 0, 0, 0)
+theme_override_colors/font_selected_color = Color(0.238363, 0.310494, 0.775576, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
+theme_override_styles/selected = SubResource("StyleBoxFlat_8pkdy")
+allow_reselect = true
+allow_search = false
+max_text_lines = 10
+auto_height = true
+item_count = 9
+item_0/text = "A.ภาวะหลอดเลือดขอดในหลอดอาหาร"
+item_1/text = "B.Hyperglycemia"
+item_2/text = "C.ภาวะท้องมานและน้ำในช่องเยื่อหุ้มปอดจากความดันหลอดเลือดดำพอร์ทัลสูง"
+item_3/text = "D.ภาวะทางสมองของผู้ป่วยตับแข็ง"
+item_4/text = "E.การแพร่กระจายของมะเร็งไปยังอวัยวะอื่น เช่น ปอดและกระดูก"
+item_5/text = "F.ภาวะไตวายจาก Hepatorenal Syndrome (HRS)"
+item_5/disabled = true
+item_6/text = "G.เสี่ยงต่อการติดเชื้อ"
+item_6/disabled = true
+item_7/text = "H.Hypertension"
+item_7/disabled = true
+item_8/disabled = true
+
+[node name="Button" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 8.975
+anchor_right = 0.5
+anchor_bottom = 8.975
+offset_left = 486.438
+offset_right = 788.438
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(-258.846, 315.117)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwbxn")
+text = "NEXT"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = -780.0
+offset_top = -146.0
+offset_right = 770.0
+offset_bottom = 416.0
+
+[node name="Name" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = -4.7
+anchor_right = 0.512
+anchor_bottom = -4.7
+offset_left = -791.48
+offset_top = 1.52588e-05
+offset_right = 791.52
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "โปรดกรอกชื่อของท่าน"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -1.45
+anchor_right = 0.5
+anchor_bottom = -1.45
+offset_left = -745.0
+offset_right = 745.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fn5su")
+
+[node name="LineEdit" type="LineEdit" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 65
+alignment = 1
+clear_button_enabled = true
+
+[node name="Start" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 4.5
+anchor_right = 0.5
+anchor_bottom = 4.5
+offset_left = -178.0
+offset_right = 179.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_daknw")
+toggle_mode = true
+text = "เริ่ม"
